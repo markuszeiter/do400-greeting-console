@@ -22,13 +22,14 @@ pipeline{
         }
 
         // Add the Release stage here
-    }
-    stage('Release') {
-    	steps {
-	      sh '''
-	       oc project rucdyw- greetings
-	      	oc start - build greeting - console--follow--wait
-		'''
-        }
+    
+	stage('Release') {
+    		steps {
+		      sh '''
+		       oc project rucdyw- greetings
+		      	oc start - build greeting - console--follow--wait
+			'''
+        	}
+	}
     }
 }
