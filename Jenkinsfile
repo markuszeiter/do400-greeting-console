@@ -26,7 +26,7 @@ pipeline{
 	stage('Release') {
     		steps {
 		      sh '''
-		       oc project rucdyw- greetings
+		       oc project rucdyw-greetings
 		      	oc start - build greeting - console--follow--wait
 			'''
         	}
